@@ -1,0 +1,154 @@
+@import '@fontsource-variable/google-sans-flex/wght.css';
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: "Google Sans Flex Variable", "Google Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+    }
+
+    body {
+        @apply text-[#1a1a1a] bg-[#fafafa] antialiased;
+    }
+
+    ::selection {
+        @apply bg-[#1a1a1a]/10;
+    }
+}
+
+@layer utilities {
+    .bg-grid {
+        opacity: 0.9;
+        background-image: linear-gradient(to right, rgba(26, 26, 26, 0.14) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(26, 26, 26, 0.14) 1px, transparent 1px);
+        background-size: 32px 32px;
+        mask-image: radial-gradient(ellipse at top, black 0%, black 15%, transparent 60%);
+    }
+
+    .bg-mesh {
+        filter: blur(80px);
+        transform: translateZ(0);
+        will-change: transform;
+    }
+
+    .bg-blob {
+        position: absolute;
+        border-radius: 50%;
+        mix-blend-mode: multiply;
+        opacity: 0.45;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .bg-blob-a {
+        width: 38rem;
+        height: 38rem;
+        left: -18rem;
+        top: -14rem;
+        background: radial-gradient(circle, rgba(196, 181, 253, 0.5) 0%, rgba(196, 181, 253, 0) 70%);
+        animation: mesh-drift-a 38s ease-in-out infinite;
+    }
+
+    .bg-blob-b {
+        width: 32rem;
+        height: 32rem;
+        right: -16rem;
+        top: -10rem;
+        background: radial-gradient(circle, rgba(244, 114, 182, 0.4) 0%, rgba(244, 114, 182, 0) 72%);
+        animation: mesh-drift-b 44s ease-in-out infinite;
+    }
+
+    .bg-blob-c {
+        width: 36rem;
+        height: 36rem;
+        left: 10%;
+        bottom: -22rem;
+        background: radial-gradient(circle, rgba(56, 189, 248, 0.38) 0%, rgba(56, 189, 248, 0) 74%);
+        animation: mesh-drift-c 42s ease-in-out infinite;
+    }
+
+    .bg-blob-d {
+        width: 28rem;
+        height: 28rem;
+        right: 12%;
+        bottom: -18rem;
+        background: radial-gradient(circle, rgba(167, 243, 208, 0.4) 0%, rgba(167, 243, 208, 0) 76%);
+        animation: mesh-drift-d 36s ease-in-out infinite;
+    }
+
+    .bg-grain {
+        opacity: 0.08;
+        mix-blend-mode: soft-light;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+        background-size: 180px 180px;
+        animation: grain-shift 12s steps(4) infinite;
+    }
+
+    @keyframes mesh-drift-a {
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        50% {
+            transform: translate3d(12%, 8%, 0) scale(1.08);
+        }
+    }
+
+    @keyframes mesh-drift-b {
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        50% {
+            transform: translate3d(-10%, 10%, 0) scale(1.06);
+        }
+    }
+
+    @keyframes mesh-drift-c {
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        50% {
+            transform: translate3d(8%, -12%, 0) scale(1.1);
+        }
+    }
+
+    @keyframes mesh-drift-d {
+        0%,
+        100% {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        50% {
+            transform: translate3d(-14%, -6%, 0) scale(1.08);
+        }
+    }
+
+    @keyframes grain-shift {
+        0% {
+            background-position: 0 0, 0 0;
+        }
+        25% {
+            background-position: -10px 6px, 4px -8px;
+        }
+        50% {
+            background-position: 6px -10px, -6px 4px;
+        }
+        75% {
+            background-position: -4px -4px, 8px 6px;
+        }
+        100% {
+            background-position: 0 0, 0 0;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .bg-blob,
+        .bg-grain {
+            animation: none !important;
+        }
+    }
+}
