@@ -1,5 +1,21 @@
 [
     {
+        "id": "wc-calculator",
+        "title": "WC Calculator",
+        "description": "Offline Electron desktop app for electrical wire and conduit sizing. Enter material, insulation, and circuit breaker rating to get the minimum conductor size, with multi-set support, AWG/conduit reference tables, and light/dark themes.",
+        "tech": ["Electron", "JavaScript", "HTML", "CSS"],
+        "link": null,
+        "repo": "https://github.com/raeAllen17/wcCalculator"
+    },
+    {
+        "id": "timey",
+        "title": "Timey",
+        "description": "A lightweight, persistent desktop app for focus sessions and productivity tracking, built with Electron, React, and TypeScript with Supabase-backed sync.",
+        "tech": ["Electron", "React", "TypeScript", "Tailwind", "Supabase"],
+        "link": null,
+        "repo": "https://github.com/raeAllen17/Timey"
+    },
+    {
         "id": "joyn",
         "title": "JOYn",
         "description": "A multi-user platform for organizing and joining group activities, with role-based access for joiners, organizers, and moderators, plus real-time chat, notifications, image uploads, and map integration. Capstone project.",
