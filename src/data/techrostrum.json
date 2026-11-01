@@ -1,0 +1,19 @@
+[
+    {
+        "id": "techrostrum",
+        "company": "TechRostrum Digital IT Services",
+        "location": "Balanga, Philippines",
+        "roles": [
+            {
+                "title": "Frontend Developer",
+                "start": "2026-01",
+                "end": "2026-04"
+            }
+        ],
+        "highlights": [
+            "Built CRM frontend interfaces for people, employees, clients, and contracts using Twig within Symfony's MVC architecture, integrated with a custom backend API.",
+            "Integrated an OCR-based contract scanning feature into the CRM frontend, auto-filling contract fields from scanned documents.",
+            "Designed Figma wireframes and built interfaces from them; launched the company website with WordPress and Elementor."
+        ]
+    }
+]

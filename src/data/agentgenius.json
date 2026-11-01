@@ -1,0 +1,26 @@
+[
+    {
+        "id": "agent-genius-ai",
+        "company": "Agent Genius AI",
+        "location": "Ontario, Canada",
+        "roles": [
+            {
+                "title": "Lead AI Automation Engineer",
+                "start": "2026-08",
+                "end": null
+            },
+            {
+                "title": "AI Automation Engineer",
+                "start": "2026-06",
+                "end": "2026-07"
+            }
+        ],
+        "highlights": [
+            "Owned two major AI-driven features for KeywordGenius, an AI-powered SEO SaaS platform, from design through implementation across the frontend, backend, and database.",
+            "Led the rewrite of a legacy digital credential platform into a modern storefront using React and C#/.NET, enabling users to store and purchase digital credentials and extending the platform to physical orders.",
+            "Built an n8n-powered health check web app that plugs into any project, plus n8n workflows connecting third-party apps and AI services through webhooks.",
+            "Implemented discount and refund features in a microservices-based C#/.NET enterprise order management system.",
+            "Shipped on Microsoft Azure with Azure DevOps releases and GitHub Actions CI, working in Scrum."
+        ]
+    }  
+]
