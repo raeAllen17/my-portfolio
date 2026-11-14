@@ -10,8 +10,14 @@ export const Contact = () => {
         that needs untangling. Email is the fastest way to reach me.
       </p>
 
-      <a className="contact-email" href="mailto:allenretuta10@gmail.com">
+      <a
+        className="contact-email"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=allenretuta10@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
         allenretuta10@gmail.com
+        <span className="visually-hidden"> (opens Gmail in a new tab)</span>
       </a>
 
       <div className="contact-meta">

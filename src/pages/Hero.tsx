@@ -12,7 +12,12 @@ export const Hero = () => {
       </p>
 
       <div className="hero-actions">
-        <a className="btn btn-primary" href="mailto:allenretuta10@gmail.com">
+        <a
+          className="btn btn-primary"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=allenretuta10@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           Email me
         </a>
         <a className="btn btn-secondary" href="#work">
