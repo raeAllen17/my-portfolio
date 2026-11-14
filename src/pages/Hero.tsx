@@ -14,7 +14,7 @@ export const Hero = () => {
       <div className="hero-actions">
         <a
           className="btn btn-primary"
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=allenretuta10@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=raeallenretuta.work@gmail.com"
           target="_blank"
           rel="noreferrer"
         >

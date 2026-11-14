@@ -46,7 +46,7 @@ export const Rail = () => {
 
       <div className="rail-foot">
         <p className="rail-place">Bataan, Philippines</p>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=allenretuta10@gmail.com" target="_blank" rel="noreferrer">allenretuta10@gmail.com</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=raeallenretuta.work@gmail.com" target="_blank" rel="noreferrer">raeallenretuta.work@gmail.com</a>
         <a href="https://github.com/raeAllen17" target="_blank" rel="noreferrer">
           GitHub profile
         </a>

@@ -12,11 +12,11 @@ export const Contact = () => {
 
       <a
         className="contact-email"
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=allenretuta10@gmail.com"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=raeallenretuta.work@gmail.com"
         target="_blank"
         rel="noreferrer"
       >
-        allenretuta10@gmail.com
+        raeallenretuta.work@gmail.com
         <span className="visually-hidden"> (opens Gmail in a new tab)</span>
       </a>
 
