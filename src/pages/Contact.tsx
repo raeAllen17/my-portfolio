@@ -1,26 +1,28 @@
 export const Contact = () => {
-    return (
-        <section className="flex flex-col gap-10 py-16 sm:py-24">
-            <div className="flex items-baseline justify-between gap-4">
-                <h2 className="text-2xl sm:text-3xl font-medium tracking-[-0.01em]">Contact</h2>
-                <p className="text-sm text-[#6b6b6b]">Say hello</p>
-            </div>
-            <div className="flex flex-col gap-6">
-                <p className="max-w-xl text-lg leading-relaxed text-[#1a1a1a]">
-                    Have a project in mind or just want to chat? Feel free to reach out.
-                </p>
-                <div className="flex flex-wrap items-center gap-4 text-sm">
-                    <a
-                        href="mailto:allenretuta10@gmail.com"
-                        className="inline-flex items-center gap-2 rounded-full border border-[#e5e5e5] px-4 py-2 hover:bg-[#f5f5f5] transition-colors"
-                    >
-                        allenretuta10@gmail.com
-                        <span aria-hidden="true">↗</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    )
+  return (
+    <section id="contact" className="contact" aria-labelledby="contact-title">
+      <h2 className="contact-title" id="contact-title">
+        Tell me what’s slowing you down.
+      </h2>
+
+      <p className="contact-body">
+        I’m open to software engineering and automation work, from a focused build to a workflow
+        that needs untangling. Email is the fastest way to reach me.
+      </p>
+
+      <a className="contact-email" href="mailto:allenretuta10@gmail.com">
+        allenretuta10@gmail.com
+      </a>
+
+      <div className="contact-meta">
+        <a href="https://github.com/raeAllen17" target="_blank" rel="noreferrer">
+          GitHub
+          <span className="visually-hidden"> (opens in a new tab)</span>
+        </a>
+        <span>Bataan, Philippines</span>
+      </div>
+    </section>
+  )
 }
 
 export default Contact

@@ -1,73 +1,79 @@
 import projectsData from '../data/projects.json'
 import type { Project } from '../types/project'
+import { ProjectArt } from '../components/ProjectArt'
+import { TechIcon } from '../components/TechIcon'
 
 const projects: Project[] = projectsData
+const projectOrder = ['joyn', 'trex-voice', 'timey', 'wc-calculator']
+
+const orderedProjects = projectOrder
+  .map((id) => projects.find((project) => project.id === id))
+  .filter((project): project is Project => project !== undefined)
+
+const [featured, ...rest] = orderedProjects
+
+const ProjectLinks = ({ project }: { project: Project }) => {
+  if (!project.link) return null
+
+  return (
+    <div className="work-links">
+      <a className="work-link" href={project.link} target="_blank" rel="noreferrer">
+        Live site
+        <span className="visually-hidden"> (opens in a new tab)</span>
+      </a>
+    </div>
+  )
+}
+
+const ProjectDetails = ({ project }: { project: Project }) => (
+  <>
+    <h3>{project.title}</h3>
+    <p className="work-desc">{project.description}</p>
+    {project.tech && project.tech.length > 0 && (
+      <p className="work-tech">
+        {project.tech.map((tech) => (
+          <span className="tech-mention" key={tech}>
+            <TechIcon name={tech} />
+            {tech}
+          </span>
+        ))}
+      </p>
+    )}
+    <ProjectLinks project={project} />
+  </>
+)
 
 export const Projects = () => {
-    return (
-        <section className="flex flex-col gap-12 py-16 sm:py-24">
-            <div className="flex items-baseline justify-between gap-4">
-                <h2 className="text-2xl sm:text-3xl font-medium tracking-[-0.01em]">Projects</h2>
-                <p className="text-sm text-[#6b6b6b]">Selected work</p>
-            </div>
+  return (
+    <section id="work" className="section" aria-labelledby="work-title">
+      <div className="section-head">
+        <h2 className="section-title" id="work-title">
+          Selected work
+        </h2>
+        <p className="section-aside">Four projects across web and desktop</p>
+      </div>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                {projects.map((project) => (
-                    <article
-                        key={project.id}
-                        className="group relative flex flex-col gap-4 rounded-2xl border border-[#e5e5e5] p-6 transition-all hover:-translate-y-1 hover:shadow-[0_20px_60px_-30px_rgba(0,0,0,0.4)]"
-                    >
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex flex-col gap-2">
-                                <h3 className="text-xl font-medium tracking-[-0.01em]">{project.title}</h3>
-                                <p className="text-sm leading-relaxed text-[#4a4a4a]">
-                                    {project.description}
-                                </p>
-                            </div>
-                        </div>
-                        {project.tech && project.tech.length > 0 && (
-                            <div className="flex flex-wrap gap-2">
-                                {project.tech.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="rounded-full border border-[#e5e5e5] px-2.5 py-1 text-xs text-[#6b6b6b]"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                        )}
-                        {(project.link || project.repo) && (
-                            <div className="mt-auto flex flex-wrap items-center gap-3 text-sm">
-                                {project.link && (
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1.5 hover:underline underline-offset-4"
-                                    >
-                                        Live demo
-                                        <span aria-hidden="true">↗</span>
-                                    </a>
-                                )}
-                                {project.repo && (
-                                    <a
-                                        href={project.repo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1.5 text-[#6b6b6b] hover:text-[#1a1a1a]"
-                                    >
-                                        Source code
-                                        <span aria-hidden="true">↗</span>
-                                    </a>
-                                )}
-                            </div>
-                        )}
-                    </article>
-                ))}
+      {featured && (
+        <article className="work-feature">
+          <ProjectArt id={featured.id} />
+          <div className="work-feature-body">
+            <ProjectDetails project={featured} />
+          </div>
+        </article>
+      )}
+
+      <div className="work-list">
+        {rest.map((project) => (
+          <article className="work-row" key={project.id}>
+            <ProjectArt id={project.id} />
+            <div className="work-row-body">
+              <ProjectDetails project={project} />
             </div>
-        </section>
-    )
+          </article>
+        ))}
+      </div>
+    </section>
+  )
 }
 
 export default Projects

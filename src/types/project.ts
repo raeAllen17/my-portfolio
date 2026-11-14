@@ -4,5 +4,4 @@ export type Project = {
     description: string;
     tech?: string[];
     link?: string | null;
-    repo?: string | null;
 };

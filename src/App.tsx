@@ -1,27 +1,35 @@
 import './index.css'
-import Header from './pages/Header'
-import Experience from './pages/Experience'
+import Rail from './components/Rail'
+import Hero from './pages/Hero'
 import Projects from './pages/Projects'
+import Experience from './pages/Experience'
 import TechStack from './pages/TechStack'
 import Contact from './pages/Contact'
-import Background from './components/Background'
 
 function App() {
   return (
     <>
-      <Background />
-      <main className="relative min-h-screen">
-        <div className="mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-12">
-          <Header />
-          <Experience />
-          <Projects />
-          <TechStack />
-          <Contact />
-          <footer className="py-12 text-sm text-[#6b6b6b]">
-            <p>© {new Date().getFullYear()} Rae Allen Retuta</p>
-          </footer>
-        </div>
-      </main>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+
+      <div className="page">
+        <Rail />
+
+        <main className="main" id="main" tabIndex={-1}>
+          <div className="main-inner">
+            <Hero />
+            <Projects />
+            <Experience />
+            <TechStack />
+            <Contact />
+
+            <footer className="site-footer">
+              <p>© {new Date().getFullYear()} Rae Allen Retuta</p>
+            </footer>
+          </div>
+        </main>
+      </div>
     </>
   )
 }

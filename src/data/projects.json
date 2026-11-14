@@ -4,39 +4,27 @@
         "title": "WC Calculator",
         "description": "Offline Electron desktop app for electrical wire and conduit sizing. Enter material, insulation, and circuit breaker rating to get the minimum conductor size, with multi-set support, AWG/conduit reference tables, and light/dark themes.",
         "tech": ["Electron", "JavaScript", "HTML", "CSS"],
-        "link": null,
-        "repo": "https://github.com/raeAllen17/wcCalculator"
+        "link": null
     },
     {
         "id": "timey",
         "title": "Timey",
         "description": "A lightweight, persistent desktop app for focus sessions and productivity tracking, built with Electron, React, and TypeScript with Supabase-backed sync.",
         "tech": ["Electron", "React", "TypeScript", "Tailwind", "Supabase"],
-        "link": null,
-        "repo": "https://github.com/raeAllen17/Timey"
+        "link": null
     },
     {
         "id": "joyn",
         "title": "JOYn",
         "description": "A multi-user platform for organizing and joining group activities, with role-based access for joiners, organizers, and moderators, plus real-time chat, notifications, image uploads, and map integration. Capstone project.",
         "tech": ["React", "Node.js", "Express", "MongoDB"],
-        "link": "https://joyn.onrender.com",
-        "repo": "https://github.com/raeAllen17/JOYn"
+        "link": "https://joyn.onrender.com"
     },
     {
         "id": "trex-voice",
         "title": "TREX Voice",
         "description": "Browser-based ephemeral voice chat on LiveKit WebRTC. No accounts or installs: join password-protected rooms with push-to-talk or open mic, and rooms auto-expire when empty, keeping it fast on low-spec devices.",
         "tech": ["Next.js", "TypeScript", "Tailwind", "LiveKit"],
-        "link": "https://trex-voice.vercel.app",
-        "repo": "https://github.com/raeAllen17/trex-voice"
-    },
-    {
-        "id": "nasa-apod",
-        "title": "NASA APOD",
-        "description": "Delivers daily astronomical content, using PostgreSQL caching for instant, rate-limit-free API discovery.",
-        "tech": ["Next.js", "Tailwind", "NASA API", "PostgreSQL"],
-        "link": null,
-        "repo": null
+        "link": "https://trex-voice.vercel.app"
     }
 ]
