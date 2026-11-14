@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import joyn01 from '../assets/joyn01.png'
 import joyn02 from '../assets/joyn02.png'
 import joyn03 from '../assets/joyn03.png'
@@ -12,14 +11,13 @@ import wc02 from '../assets/wc02.png'
 import timey01 from '../assets/timey01.png'
 import timey02 from '../assets/timey02.png'
 import timey03 from '../assets/timey03.png'
+import ProjectCarousel from './ProjectCarousel'
 
 type ProjectArtProps = {
   id: string
-}
-
-type ProjectSlideshowProps = {
-  slides: string[]
-  className: string
+  title: string
+  kind: string
+  index: number
 }
 
 const joynSlides = [joyn01, joyn02, joyn03, joyn04, joyn05]
@@ -27,50 +25,26 @@ const trexSlides = [trex01, trex02, trex03]
 const wcSlides = [wc01, wc02]
 const timeySlides = [timey01, timey02, timey03]
 
-const ProjectSlideshow = ({ slides, className }: ProjectSlideshowProps) => {
-  const [active, setActive] = useState(0)
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-
-    const interval = window.setInterval(() => {
-      setActive((current) => (current + 1) % slides.length)
-    }, 4200)
-
-    return () => window.clearInterval(interval)
-  }, [slides.length])
-
-  return (
-    <div className={`project-art ${className}`} aria-hidden="true">
-      {slides.map((slide, index) => (
-        <img
-          key={slide}
-          className={`project-slide${index === active ? ' is-active' : ''}`}
-          src={slide}
-          alt=""
-          loading={index === 0 ? 'eager' : 'lazy'}
-          decoding="async"
-          draggable={false}
-        />
-      ))}
-    </div>
-  )
+const artConfig: Record<string, { slides: string[]; tone: string }> = {
+  joyn: { slides: joynSlides, tone: 'tone-pine' },
+  'trex-voice': { slides: trexSlides, tone: 'tone-pine' },
+  timey: { slides: timeySlides, tone: 'tone-paper' },
+  'wc-calculator': { slides: wcSlides, tone: 'tone-paper' },
 }
 
-const JoynArt = () => <ProjectSlideshow slides={joynSlides} className="art-joyn-slides" />
+export const ProjectArt = ({ id, title, kind, index }: ProjectArtProps) => {
+  const config = artConfig[id]
+  if (!config) return null
 
-const TrexArt = () => <ProjectSlideshow slides={trexSlides} className="art-trex-slides" />
-
-const WcArt = () => <ProjectSlideshow slides={wcSlides} className="art-wc-slides" />
-
-const TimeyArt = () => <ProjectSlideshow slides={timeySlides} className="art-timey-slides" />
-
-export const ProjectArt = ({ id }: ProjectArtProps) => {
-  if (id === 'joyn') return <JoynArt />
-  if (id === 'trex-voice') return <TrexArt />
-  if (id === 'timey') return <TimeyArt />
-  if (id === 'wc-calculator') return <WcArt />
-  return null
+  return (
+    <ProjectCarousel
+      slides={config.slides}
+      title={title}
+      kind={kind}
+      index={index}
+      tone={config.tone}
+    />
+  )
 }
 
 export default ProjectArt

@@ -27,7 +27,6 @@ const ProjectLinks = ({ project }: { project: Project }) => {
 
 const ProjectDetails = ({ project }: { project: Project }) => (
   <>
-    <h3>{project.title}</h3>
     <p className="work-desc">{project.description}</p>
     {project.tech && project.tech.length > 0 && (
       <p className="work-tech">
@@ -55,7 +54,12 @@ export const Projects = () => {
 
       {featured && (
         <article className="work-feature">
-          <ProjectArt id={featured.id} />
+          <ProjectArt
+            id={featured.id}
+            title={featured.title}
+            kind={featured.kind}
+            index={0}
+          />
           <div className="work-feature-body">
             <ProjectDetails project={featured} />
           </div>
@@ -63,9 +67,14 @@ export const Projects = () => {
       )}
 
       <div className="work-list">
-        {rest.map((project) => (
+        {rest.map((project, index) => (
           <article className="work-row" key={project.id}>
-            <ProjectArt id={project.id} />
+            <ProjectArt
+              id={project.id}
+              title={project.title}
+              kind={project.kind}
+              index={index + 1}
+            />
             <div className="work-row-body">
               <ProjectDetails project={project} />
             </div>
