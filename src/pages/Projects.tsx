@@ -4,7 +4,14 @@ import { ProjectArt } from '../components/ProjectArt'
 import { TechIcon } from '../components/TechIcon'
 
 const projects: Project[] = projectsData
-const projectOrder = ['joyn', 'trex-voice', 'timey', 'wc-calculator']
+const projectOrder = [
+  'joyn',
+  'feedback-automation',
+  'invoice-automation',
+  'trex-voice',
+  'timey',
+  'wc-calculator',
+]
 
 const orderedProjects = projectOrder
   .map((id) => projects.find((project) => project.id === id))
@@ -49,7 +56,7 @@ export const Projects = () => {
         <h2 className="section-title" id="work-title">
           Selected work
         </h2>
-        <p className="section-aside">Four projects across web and desktop</p>
+        <p className="section-aside">Six projects across product, desktop, and automation</p>
       </div>
 
       {featured && (

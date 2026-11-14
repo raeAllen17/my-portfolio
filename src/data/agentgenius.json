@@ -20,64 +20,8 @@
                 "end": "2026-07",
                 "highlights": [
                     "Owned two major AI-driven features for KeywordGenius, an AI-powered SEO SaaS platform, from design through implementation across the frontend, backend, and database.",
-                    "Built an n8n-powered health check web app that plugs into any project, plus n8n workflows connecting third-party apps and AI services through webhooks."
-                ],
-                "projects": [
-                    {
-                        "title": "Customer feedback analysis automation",
-                        "summary": "Built an automated customer feedback analysis system for a retail business, with AI-generated daily insights and real-time urgent alerts.",
-                        "features": [
-                            "Collects customer feedback from Google Forms into Google Sheets.",
-                            "Runs daily feedback analysis with AI-generated insights and sentiment metrics.",
-                            "Sends an automated daily email summary report to the business team.",
-                            "Includes a real-time urgent alert workflow for negative feedback rated 2 or lower."
-                        ],
-                        "flows": [
-                            {
-                                "label": "Daily analytics",
-                                "steps": [
-                                    "Google Form",
-                                    "Google Sheets",
-                                    "Feedback collection",
-                                    "Metrics calculation",
-                                    "AI analysis",
-                                    "Daily email report"
-                                ]
-                            },
-                            {
-                                "label": "Urgent alert",
-                                "steps": [
-                                    "Google Form",
-                                    "Google Sheets trigger",
-                                    "Negative rating detection",
-                                    "Alert generation",
-                                    "Urgent email notification"
-                                ]
-                            }
-                        ],
-                        "stack": [
-                            "n8n",
-                            "DeepSeek API",
-                            "Google Forms",
-                            "Google Sheets"
-                        ]
-                    },
-                    {
-                        "title": "Invoice collections automation",
-                        "summary": "Built a collections automation workflow that monitors invoice status, follows up on overdue payments, escalates high-value accounts, and reports weekly.",
-                        "features": [
-                            "Monitors invoice status and identifies overdue payments.",
-                            "Sends personalized reminder emails.",
-                            "Escalates high-value unpaid invoices to Slack.",
-                            "Generates a weekly collections summary."
-                        ],
-                        "stack": [
-                            "n8n",
-                            "DeepSeek API",
-                            "Google Sheets",
-                            "Slack"
-                        ]
-                    }
+                    "Built an n8n-powered health check web app that plugs into any project, plus n8n workflows connecting third-party apps and AI services through webhooks.",
+                    "Completed applied automation training with n8n, building customer-feedback and invoice-collections workflows detailed in Projects."
                 ]
             }
         ]

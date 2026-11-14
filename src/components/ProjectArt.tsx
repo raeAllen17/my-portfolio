@@ -11,6 +11,10 @@ import wc02 from '../assets/wc02.png'
 import timey01 from '../assets/timey01.png'
 import timey02 from '../assets/timey02.png'
 import timey03 from '../assets/timey03.png'
+import feedback01 from '../assets/customerfeedback01.png'
+import feedback02 from '../assets/customerfeedback02.png'
+import invoice01 from '../assets/invoice01.png'
+import invoice02 from '../assets/invoice02.png'
 import ProjectCarousel from './ProjectCarousel'
 
 type ProjectArtProps = {
@@ -24,10 +28,14 @@ const joynSlides = [joyn01, joyn02, joyn03, joyn04, joyn05]
 const trexSlides = [trex01, trex02, trex03]
 const wcSlides = [wc01, wc02]
 const timeySlides = [timey01, timey02, timey03]
+const feedbackSlides = [feedback01, feedback02]
+const invoiceSlides = [invoice01, invoice02]
 
 const artConfig: Record<string, { slides: string[]; tone: string }> = {
   joyn: { slides: joynSlides, tone: 'tone-pine' },
   'trex-voice': { slides: trexSlides, tone: 'tone-pine' },
+  'feedback-automation': { slides: feedbackSlides, tone: 'tone-paper' },
+  'invoice-automation': { slides: invoiceSlides, tone: 'tone-paper' },
   timey: { slides: timeySlides, tone: 'tone-paper' },
   'wc-calculator': { slides: wcSlides, tone: 'tone-paper' },
 }

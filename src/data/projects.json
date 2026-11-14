@@ -30,5 +30,21 @@
         "description": "Browser-based ephemeral voice chat on LiveKit WebRTC. No accounts or installs: join password-protected rooms with push-to-talk or open mic, and rooms auto-expire when empty, keeping it fast on low-spec devices.",
         "tech": ["Next.js", "TypeScript", "Tailwind", "LiveKit"],
         "link": "https://trex-voice.vercel.app"
+    },
+    {
+        "id": "feedback-automation",
+        "title": "Customer Feedback Automation",
+        "kind": "Automation project",
+        "description": "Built during an Agent Genius AI automation training program. Collects customer feedback from Google Forms into Google Sheets, runs daily AI analysis with sentiment metrics, emails a summary report, and raises real-time alerts for ratings of 2 or lower.",
+        "tech": ["n8n", "DeepSeek API", "Google Forms", "Google Sheets"],
+        "link": null
+    },
+    {
+        "id": "invoice-automation",
+        "title": "Invoice Collections Automation",
+        "kind": "Automation project",
+        "description": "Built during an Agent Genius AI automation training program. Monitors invoice status, sends personalized reminders for overdue payments, escalates high-value unpaid invoices to Slack, and generates a weekly collections summary.",
+        "tech": ["n8n", "DeepSeek API", "Google Sheets", "Slack"],
+        "link": null
     }
 ]
